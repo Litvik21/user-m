@@ -9,7 +9,11 @@ import java.lang.annotation.*;
 @Target({ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidPassword {
-    String message() default "Invalid password";
+    String message() default "Passwords don't match!";
+
+    String field();
+
+    String fieldMatch();
 
     Class<?>[] groups() default {};
 
