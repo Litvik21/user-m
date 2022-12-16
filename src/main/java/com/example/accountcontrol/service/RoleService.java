@@ -1,8 +1,7 @@
 package com.example.accountcontrol.service;
 
-import com.example.accountcontrol.model.Role;
-
 import java.util.List;
+import com.example.accountcontrol.model.Role;
 
 public interface RoleService {
 

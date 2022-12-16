@@ -2,7 +2,6 @@ package com.example.accountcontrol.security;
 
 import java.util.Optional;
 import java.util.Set;
-
 import com.example.accountcontrol.model.Role;
 import com.example.accountcontrol.model.UserAccount;
 import com.example.accountcontrol.service.RoleService;

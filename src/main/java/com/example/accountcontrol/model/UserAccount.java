@@ -1,9 +1,8 @@
 package com.example.accountcontrol.model;
 
-import lombok.*;
-
 import javax.persistence.*;
 import java.util.Set;
+import lombok.*;
 
 @Getter
 @Setter

@@ -1,10 +1,9 @@
 package com.example.accountcontrol.dto;
 
+import java.util.List;
 import com.example.accountcontrol.model.UserAccount;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
 
 @Getter
 @Setter

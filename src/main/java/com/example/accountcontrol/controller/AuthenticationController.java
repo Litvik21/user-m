@@ -1,5 +1,6 @@
 package com.example.accountcontrol.controller;
 
+import javax.validation.Valid;
 import java.util.Map;
 import java.util.stream.Collectors;
 import com.example.accountcontrol.dto.UserAccountAddingNewDto;
@@ -15,8 +16,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.validation.Valid;
 
 @RestController
 public class AuthenticationController {
