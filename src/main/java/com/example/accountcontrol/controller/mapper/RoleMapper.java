@@ -1,4 +1,4 @@
-package com.example.accountcontrol.mapper;
+package com.example.accountcontrol.controller.mapper;
 
 import com.example.accountcontrol.model.Role;
 import com.example.accountcontrol.dto.RoleResponseDto;

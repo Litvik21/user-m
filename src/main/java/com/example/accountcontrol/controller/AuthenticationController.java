@@ -6,11 +6,12 @@ import java.util.stream.Collectors;
 import com.example.accountcontrol.dto.UserAccountAddingNewDto;
 import com.example.accountcontrol.dto.UserAccountLoginDto;
 import com.example.accountcontrol.dto.UserAccountResponseDto;
-import com.example.accountcontrol.mapper.RoleMapper;
+import com.example.accountcontrol.controller.mapper.RoleMapper;
 import com.example.accountcontrol.model.UserAccount;
 import com.example.accountcontrol.security.AuthenticationService;
 import com.example.accountcontrol.security.JwtTokenProvider;
 import com.example.accountcontrol.service.UserAccountService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,6 +35,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
+    @ApiOperation(value = "registration new account for user")
     public UserAccountResponseDto register(@RequestBody @Valid UserAccountAddingNewDto requestDto) {
         UserAccount account = authenticationService.addNewAccount(requestDto.getUsername(),
                 requestDto.getPassword(), requestDto.getFirstName(),requestDto.getLastName());
@@ -48,6 +50,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/login")
+    @ApiOperation(value = "login to account")
     public ResponseEntity<Object> login(@RequestBody @Valid UserAccountLoginDto requestDto) {
         if (checkOnStatus(requestDto)) {
             UserAccount account = authenticationService.login(requestDto.getUsername(), requestDto.getPassword());
