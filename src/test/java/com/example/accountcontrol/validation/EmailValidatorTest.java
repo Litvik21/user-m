@@ -9,20 +9,24 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import javax.validation.ConstraintValidatorContext;
+import java.util.Arrays;
+import java.util.Collections;
 
 class EmailValidatorTest {
     private UsernameValidator usernameValidator;
     private ConstraintValidatorContext validatorContext;
+    private UserAccountService service;
 
     @BeforeEach
     void setUp() {
-        UserAccountService service = Mockito.mock(UserAccountServiceImpl.class);
-        usernameValidator = new UsernameValidator(service);
+        service = Mockito.mock(UserAccountServiceImpl.class);
         validatorContext = Mockito.mock(ConstraintValidatorContext.class);
     }
 
     @Test
     void isValid_Ok() {
+        Mockito.when(service.getAll()).thenReturn(Collections.emptyList());
+        usernameValidator = new UsernameValidator(service);
         Assertions.assertTrue(usernameValidator.isValid("Litvik", validatorContext));
         Assertions.assertTrue(usernameValidator.isValid("Username123", validatorContext));
     }
