@@ -10,13 +10,18 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@FieldsValueMatch(
+        field = "password",
+        fieldMatch = "repeatPassword",
+        message = "Passwords do not match!"
+)
 public class UserAccountAddingNewDto {
     @Size(min = 3, max = 16)
     @ValidUsername
     private String username;
     @Size(min = 3, max = 16)
     @NotEmpty
-    @ValidPassword(field = "password", fieldMatch = "repeatPassword")
+    @ValidPassword
     private String password;
     private String repeatPassword;
     private String firstName;

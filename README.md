@@ -30,23 +30,22 @@ You can see difference between USER and ADMIN roles, access to different endpoin
 - Docker
 
 ## ⚡️Quickstart
-1. Fork this repository
-2. Copy link of project
-3. Create new project from Version Control
-4. Edit resources/application.properties - set the necessary parameters
+1. Clone project
+2. Open project in IDE
+3. Edit resources/application.properties - set the necessary parameters
 ``` java
     spring.datasource.driver-class-name=YOUR_DRIVER
     spring.datasource.url=YOUR_URL
     spring.datasource.username=YOUR_USERNAME
     spring.datasource.password=YOUR_PASSWORD
 ```
-5. Do not forget set this param on "create" for first project run. Like this:
+4. Do not forget set this param on "create" for first project run. Like this:
 ``` java
     spring.jpa.hibernate.ddl-auto=create
 ```
-6. Create the necessary name of DB
-7. Run project
-8. this command "docker pull litvik/account-control:latest" for using docker
+5. Create the necessary name of DB
+6. Run project
+7. this command "docker pull litvik/account-control:latest" for using docker
 
 ## 👀 Example of parameters for db.properties
 ``` java

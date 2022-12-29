@@ -11,10 +11,6 @@ import java.lang.annotation.*;
 public @interface ValidPassword {
     String message() default "Passwords don't match!";
 
-    String field();
-
-    String fieldMatch();
-
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};

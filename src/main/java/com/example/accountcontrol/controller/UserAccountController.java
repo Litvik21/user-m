@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserAccountController {
     private final UserAccountMapper mapper;
     private final UserAccountService accountService;
@@ -52,7 +52,7 @@ public class UserAccountController {
         return mapper.toDto(account);
     }
 
-    @PutMapping("/{id}/edit")
+    @PutMapping("/{id}")
     @ApiOperation(value = "Update account information of account user")
     public UserAccountResponseDto update(
             @PathVariable @ApiParam(value = "id of account user that you want update") Long id,
